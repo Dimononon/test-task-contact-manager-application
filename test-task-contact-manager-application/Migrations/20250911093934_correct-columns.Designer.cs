@@ -12,8 +12,8 @@ using test_task_contact_manager_application.Infrastructure;
 namespace test_task_contact_manager_application.Migrations
 {
     [DbContext(typeof(ContactManagerDbContext))]
-    [Migration("20250911082031_add-contacts-table")]
-    partial class addcontactstable
+    [Migration("20250911093934_correct-columns")]
+    partial class correctcolumns
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,7 @@ namespace test_task_contact_manager_application.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateOnly>("Date")
+                    b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("date");
 
                     b.Property<bool>("Married")
@@ -43,7 +43,7 @@ namespace test_task_contact_manager_application.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Slary")
+                    b.Property<decimal>("Salary")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");

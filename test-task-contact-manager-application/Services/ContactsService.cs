@@ -43,7 +43,7 @@ namespace test_task_contact_manager_application.Services
         {
             var contact = await _context.Contacts.FindAsync(id);
             if (contact == null)
-                throw new Exception("Can't update contact. Try create new contact.");
+                throw new Exception("Can't Found contact. Try create new contact.");
 
             _context.Entry(contact).CurrentValues.SetValues(newContact);
             await _context.SaveChangesAsync();

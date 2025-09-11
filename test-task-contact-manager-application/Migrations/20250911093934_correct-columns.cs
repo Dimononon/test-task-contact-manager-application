@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace test_task_contact_manager_application.Migrations
 {
     /// <inheritdoc />
-    public partial class addcontactstable : Migration
+    public partial class correctcolumns : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,10 +17,10 @@ namespace test_task_contact_manager_application.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Date = table.Column<DateOnly>(type: "date", nullable: false),
+                    DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false),
                     Married = table.Column<bool>(type: "bit", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Slary = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {

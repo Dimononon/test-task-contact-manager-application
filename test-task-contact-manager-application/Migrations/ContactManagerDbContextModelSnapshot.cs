@@ -28,7 +28,7 @@ namespace test_task_contact_manager_application.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateOnly>("Date")
+                    b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("date");
 
                     b.Property<bool>("Married")
@@ -40,7 +40,7 @@ namespace test_task_contact_manager_application.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Slary")
+                    b.Property<decimal>("Salary")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
